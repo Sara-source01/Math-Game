@@ -117,6 +117,23 @@ struct stQuizz
 };
 
 
+int SimpleCalculator(int Number1, int Number2, enOperationType OpType)
+{
+    switch (OpType)
+    {
+    case enOperationType::Add:
+        return Number1 + Number2;
+    case enOperationType::Sub:
+        return Number1 - Number2;
+    case enOperationType::Mult:
+        return Number1 * Number2;
+    case enOperationType::Div:
+        return (Number1 / Number2); 
+    default:
+        return Number1 + Number2;
+    }
+}
+
 
 int main()
 {
