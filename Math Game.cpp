@@ -288,11 +288,26 @@ void ResetScreen()
 
 }
 
+void StartGame()
+{
+    char PlayAgain = 'Y';
+
+    do
+    {
+        ResetScreen();
+        PlayMathGame();
+
+        cout << endl << "Do you want to play again? Y/N? ";
+        cin >> PlayAgain;
+    } while (PlayAgain == 'Y' || PlayAgain == 'y');
+}
 
 
 int main()
 {
     srand((unsigned)time(NULL));
+
+    StartGame();
 
     return 0;
 }
