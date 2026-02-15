@@ -244,6 +244,14 @@ void AskAndCorrectQuestionListAnswers(stQuizz& Quizz)
     Quizz.isPass = (Quizz.NumberOfRightAnswers >= Quizz.NumberOfWrongAnswers);
 }
 
+string GetFinalResultsText(bool Pass)
+{
+    if (Pass)
+        return "PASS :-)";
+    else
+        return "Fail :-(";
+}
+
 
 
 int main()
