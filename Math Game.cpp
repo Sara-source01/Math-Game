@@ -208,6 +208,30 @@ void PrintTheQuestion(stQuizz& Quizz, short QuestionNumber)
     cout << "\n_________" << endl;
 }
 
+void CorrectTheQuestionAnswer(stQuizz& Quizz, short QuestionNumber)
+{
+    if (Quizz.QuestionList[QuestionNumber].PlayerAnswer != Quizz.QuestionList[QuestionNumber].CorrectAnswer)
+    {
+        Quizz.QuestionList[QuestionNumber].AnswerResult = false;
+        Quizz.NumberOfWrongAnswers++;
+
+        cout << "Wrong Answer :-( \n";
+        cout << "The right answer is: ";
+        cout << Quizz.QuestionList[QuestionNumber].CorrectAnswer;
+        cout << "\n";
+    }
+    else
+    {
+        Quizz.QuestionList[QuestionNumber].AnswerResult = true;
+        Quizz.NumberOfRightAnswers++;
+
+        cout << "Right answer is :-) \n";
+    }
+    cout << endl;
+
+    SetScreenColor(Quizz.QuestionList[QuestionNumber].AnswerResult);
+}
+
 
 int main()
 {
