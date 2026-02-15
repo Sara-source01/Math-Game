@@ -134,6 +134,12 @@ int SimpleCalculator(int Number1, int Number2, enOperationType OpType)
     }
 }
 
+enOperationType GetRandomOperationType()
+{
+    int Op = RandomNumber(1, 4);
+    return (enOperationType)Op;
+}
+
 
 int main()
 {
