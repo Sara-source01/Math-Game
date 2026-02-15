@@ -49,9 +49,9 @@ The game provides instant feedback, visual indicators using console colors, and 
 ## ▶️ How to Run
 
 1. Clone the repository:
-  
+   ```bash
    git clone https://github.com/Sara-source01/Math-Game.git
-  
+   ```
 
 2. Open the project in Visual Studio.
 
