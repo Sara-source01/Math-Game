@@ -8,6 +8,25 @@ enum enQuestionsLevel { EasyLevel = 1, MedLevel = 2, HardLevel = 3, Mix = 4 };
 
 enum enOperationType { Add = 1, Sub = 2, Mult = 3, Div = 4, MixOp = 5 };
 
+
+string GetOpTypeSymbol(enOperationType OpType)
+{
+    switch (OpType)
+    {
+    case enOperationType::Add:
+        return "+";
+    case enOperationType::Sub:
+        return "-";
+    case enOperationType::Mult:
+        return "x";
+    case enOperationType::Div:
+        return "/";
+    default:
+        return "Mix";
+    }
+}
+
+
 int main()
 {
     return 0;
