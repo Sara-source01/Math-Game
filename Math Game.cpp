@@ -281,6 +281,15 @@ void PlayMathGame()
     PrintQuizzResults(Quizz);
 }
 
+void ResetScreen()
+{
+    system("cls");
+    system("color 0F");
+
+}
+
+
+
 int main()
 {
     srand((unsigned)time(NULL));
