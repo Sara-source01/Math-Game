@@ -232,6 +232,19 @@ void CorrectTheQuestionAnswer(stQuizz& Quizz, short QuestionNumber)
     SetScreenColor(Quizz.QuestionList[QuestionNumber].AnswerResult);
 }
 
+void AskAndCorrectQuestionListAnswers(stQuizz& Quizz)
+{
+    for (short QuestionNumber = 0; QuestionNumber < Quizz.NumberOfQuestions; QuestionNumber++)
+    {
+        PrintTheQuestion(Quizz, QuestionNumber);
+        Quizz.QuestionList[QuestionNumber].PlayerAnswer = ReadQuestionAnswer();
+        CorrectTheQuestionAnswer(Quizz, QuestionNumber);
+    }
+
+    Quizz.isPass = (Quizz.NumberOfRightAnswers >= Quizz.NumberOfWrongAnswers);
+}
+
+
 
 int main()
 {
