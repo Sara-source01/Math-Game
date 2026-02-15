@@ -191,6 +191,13 @@ void GenerateQuizzQuestions(stQuizz& Quizz)
     }
 }
 
+int ReadQuestionAnswer()
+{
+    int Answer = 0;
+    cin >> Answer;
+    return Answer;
+}
+
 
 
 int main()
