@@ -80,6 +80,19 @@ enQuestionsLevel ReadQuestionsLevel()
     return (enQuestionsLevel) QuestionLevel;
 }
 
+enOperationType ReadOpType()
+{
+    short OpType;
+
+    do
+    {
+        cout << "Enter operation level [1] Add, [2] Sub, [3] Mul, [4] Div, [5] Mix? ";
+        cin >> OpType;
+    } while (OpType < 1 || OpType > 5);
+
+    return (enOperationType) OpType;
+}
+
 
 int main()
 {
