@@ -67,6 +67,19 @@ short ReadHowManyQuestions()
     return NumberOfQuestions;
 }
 
+enQuestionsLevel ReadQuestionsLevel()
+{
+    short QuestionLevel = 0;
+
+    do
+    {
+        cout << "Enter questions level [1] Easy, [2] Med, [3] Hard, [4] Mix? ";
+        cin >> QuestionLevel;
+    } while (QuestionLevel < 1 || QuestionLevel > 4);
+
+    return (enQuestionsLevel) QuestionLevel;
+}
+
 
 int main()
 {
