@@ -27,6 +27,13 @@ string GetOpTypeSymbol(enOperationType OpType)
 }
 
 
+string GetQuestionLevelText(enQuestionsLevel QuestionLevel)
+{
+    string arrQuestionLevelText[4] = { "Easy","Medium","Hard","Mixed" };
+    return arrQuestionLevelText[QuestionLevel - 1];
+}
+
+
 int main()
 {
     return 0;
