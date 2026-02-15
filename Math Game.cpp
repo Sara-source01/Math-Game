@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include <cstdlib> 
+#include <ctime>
 using namespace std;
 
 enum enQuestionsLevel { EasyLevel = 1, MedLevel = 2, HardLevel = 3, Mix = 4 };
@@ -34,8 +36,17 @@ string GetQuestionLevelText(enQuestionsLevel QuestionLevel)
 }
 
 
+int RandomNumber(int From, int To)
+{
+    int randNum = rand() % (To - From + 1) + From;
+    return randNum;
+}
+
+
 int main()
 {
+    srand((unsigned)time(NULL));
+
     return 0;
 }
 
