@@ -252,7 +252,22 @@ string GetFinalResultsText(bool Pass)
         return "Fail :-(";
 }
 
+void PrintQuizzResults(stQuizz Quizz)
+{
+    cout << "\n";
+    cout << "_____________________________\n\n";
+    cout << " Final Result is " << GetFinalResultsText(Quizz.isPass);
+    cout << "_____________________________\n\n";
 
+
+    cout << "Number of Questions: " << Quizz.NumberOfQuestions << endl;
+    cout << "Questions Level    :" << GetQuestionLevelText(Quizz.QuestionsLevel) << endl;
+    cout << "OpType             :" << GetOpTypeSymbol(Quizz.OpType) << endl;
+    cout << "Number of Right Ansers: " << Quizz.NumberOfRightAnswers << endl;
+    cout << "Number of Wrong Ansers: " << Quizz.NumberOfWrongAnswers << endl;
+    cout << "_____________________________\n";
+
+}
 
 int main()
 {
