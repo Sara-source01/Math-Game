@@ -4,7 +4,9 @@
 #include <iostream>
 using namespace std;
 
+enum enQuestionsLevel { EasyLevel = 1, MedLevel = 2, HardLevel = 3, Mix = 4 };
 
+enum enOperationType { Add = 1, Sub = 2, Mult = 3, Div = 4, MixOp = 5 };
 
 int main()
 {
