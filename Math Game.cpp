@@ -43,6 +43,18 @@ int RandomNumber(int From, int To)
 }
 
 
+void SetScreenColor(bool Right)
+{
+    if (Right)
+        system("color 2F"); // Green for correct answers.
+    else
+    {
+        system("color 4F"); // Red for incorrect answers.
+        cout << "\a"; // Plays an alert sound.
+    }
+}
+
+
 int main()
 {
     srand((unsigned)time(NULL));
