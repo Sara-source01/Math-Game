@@ -183,6 +183,15 @@ stQuestion GenerateQuestion(enQuestionsLevel QuestionLevel, enOperationType OpTy
     return Question;
 }
 
+void GenerateQuizzQuestions(stQuizz& Quizz)
+{
+    for (short Question = 0; Question < Quizz.NumberOfQuestions; Question++)
+    {
+        Quizz.QuestionList[Question] = GenerateQuestion(Quizz.QuestionsLevel, Quizz.OpType);
+    }
+}
+
+
 
 int main()
 {
