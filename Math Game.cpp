@@ -269,6 +269,18 @@ void PrintQuizzResults(stQuizz Quizz)
 
 }
 
+void PlayMathGame()
+{
+    stQuizz Quizz;
+    Quizz.NumberOfQuestions = ReadHowManyQuestions();
+    Quizz.QuestionsLevel = ReadQuestionsLevel();
+    Quizz.OpType = ReadOpType();
+
+    GenerateQuizzQuestions(Quizz);
+    AskAndCorrectQuestionListAnswers(Quizz);
+    PrintQuizzResults(Quizz);
+}
+
 int main()
 {
     srand((unsigned)time(NULL));
