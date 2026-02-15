@@ -54,6 +54,19 @@ void SetScreenColor(bool Right)
     }
 }
 
+short ReadHowManyQuestions()
+{
+    short NumberOfQuestions;
+
+    do
+    {
+        cout << "How many questions do yoy want to answer? ";
+        cin >> NumberOfQuestions;
+    } while (NumberOfQuestions < 1 || NumberOfQuestions > 10);
+
+    return NumberOfQuestions;
+}
+
 
 int main()
 {
