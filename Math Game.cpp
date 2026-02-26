@@ -60,7 +60,7 @@ short ReadHowManyQuestions()
 
     do
     {
-        cout << "How many questions do yoy want to answer? ";
+        cout << "How many questions do you want to answer? ";
         cin >> NumberOfQuestions;
     } while (NumberOfQuestions < 1 || NumberOfQuestions > 10);
 
@@ -86,7 +86,7 @@ enOperationType ReadOpType()
 
     do
     {
-        cout << "Enter operation level [1] Add, [2] Sub, [3] Mul, [4] Div, [5] Mix? ";
+        cout << "Enter operation type [1] Add, [2] Sub, [3] Mul, [4] Div, [5] Mix? ";
         cin >> OpType;
     } while (OpType < 1 || OpType > 5);
 
@@ -263,8 +263,8 @@ void PrintQuizzResults(stQuizz Quizz)
     cout << "Number of Questions: " << Quizz.NumberOfQuestions << endl;
     cout << "Questions Level    :" << GetQuestionLevelText(Quizz.QuestionsLevel) << endl;
     cout << "OpType             :" << GetOpTypeSymbol(Quizz.OpType) << endl;
-    cout << "Number of Right Ansers: " << Quizz.NumberOfRightAnswers << endl;
-    cout << "Number of Wrong Ansers: " << Quizz.NumberOfWrongAnswers << endl;
+    cout << "Number of Right Answers: " << Quizz.NumberOfRightAnswers << endl;
+    cout << "Number of Wrong Answers: " << Quizz.NumberOfWrongAnswers << endl;
     cout << "_____________________________\n";
 
 }
